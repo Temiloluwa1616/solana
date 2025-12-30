@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Starter Pack — NEWYEARPUMP</title>
+  <link rel="stylesheet" href="sol.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">🎅 $NEWYEARPUMP</div>
+      <ul class="nav-links">
+        <li><a href="sol.html#home">Home</a></li>
+        <li><a href="buy.html">Buy</a></li>
+        <li><a href="onepager.html">One-Pager</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main style="padding:2.5rem; max-width:900px; margin:0 auto;">
+    <h1 style="color:var(--gold); font-size:2rem; margin-bottom:0.5rem;">🎅 Santa Fortune's Starter Pack</h1>
+    <p style="font-size:1.1rem; color:#ddd; margin-bottom:1.5rem;">Price: <strong>0.05 ETH</strong> | 1,000 NEWYEARPUMP Tokens</p>
+    <p>Instant delivery on-chain. Ideal for newcomers who want to join the holiday festivities and experience blockchain-powered tokenomics.</p>
+
+    <section style="margin-top:1.2rem; background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px;">
+      <h3>What's Included</h3>
+      <ul>
+        <li>1,000 NEWYEARPUMP tokens</li>
+        <li>Instant blockchain transfer to your wallet</li>
+        <li>Access to community channels and holiday events</li>
+        <li>Eligibility for seasonal rewards and staking</li>
+      </ul>
+    </section>
+
+    <form id="purchaseForm" style="margin-top:1rem; background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px;">
+      <label>Name<br><input type="text" id="name" required style="width:100%; padding:0.6rem; margin-top:0.3rem;"></label>
+      <label style="display:block; margin-top:0.7rem;">Email<br><input type="email" id="email" required style="width:100%; padding:0.6rem; margin-top:0.3rem;"></label>
+      <label style="display:block; margin-top:0.7rem;">Wallet Address (optional)<br><input type="text" id="wallet" style="width:100%; padding:0.6rem; margin-top:0.3rem;"></label>
+
+      <div style="margin-top:1rem; display:flex; gap:0.5rem; align-items:center;">
+        <button type="button" id="buyButton" class="btn btn-primary">Buy Now — 0.05 ETH</button>
+        <a class="btn btn-secondary" href="buy.html">Cancel</a>
+        <div id="walletStatus" style="margin-left:1rem;color:#ddd">Wallet: <span id="walletAddr">not connected</span></div>
+      </div>
+
+      <div id="txStatus" style="margin-top:0.8rem;color:#ffd; font-weight:600"></div>
+    </form>
+
+    <p style="margin-top:1rem;color:#ccc; font-size:0.9rem;">💡 Tip: Make sure you're connected to the correct blockchain network before purchasing.</p>
+  </main>
+
+<!-- ethers.js library -->
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.min.js"></script>
+<!-- Custom script for buy functionality -->
+<script src="script.js"></script>
+<!-- Site scripts -->
+<script src="sol.js"></script>
+</body>
+</html>
+</body>
+</html>

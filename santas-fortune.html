@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Santa's Fortune — NEWYEARPUMP</title>
+  <link rel="stylesheet" href="sol.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">🎅 $NEWYEARPUMP</div>
+      <ul class="nav-links">
+        <li><a href="sol.html#home">Home</a></li>
+        <li><a href="buy.html">Buy</a></li>
+        <li><a href="onepager.html">One-Pager</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main style="padding:2.5rem; max-width:900px; margin:0 auto;">
+    <h1 style="color:var(--gold);">Santa's Fortune — $500</h1>
+    <p>100,000 NEWYEARPUMP tokens + VIP access, yield farming, and exclusive events.</p>
+
+    <section style="margin-top:1.2rem; background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px;">
+      <h3>What's Included</h3>
+      <ul>
+        <li>100,000 NEWYEARPUMP tokens</li>
+        <li>VIP support and personal manager</li>
+        <li>Access to exclusive yield farming events</li>
+      </ul>
+    </section>
+
+    <form id="purchaseForm" style="margin-top:1rem; background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px;">
+      <label>Name<br><input type="text" id="name" required style="width:100%; padding:0.6rem; margin-top:0.3rem;"></label>
+      <label style="display:block; margin-top:0.7rem;">Email<br><input type="email" id="email" required style="width:100%; padding:0.6rem; margin-top:0.3rem;"></label>
+      <label style="display:block; margin-top:0.7rem;">Wallet Address (optional)<br><input type="text" id="wallet" style="width:100%; padding:0.6rem; margin-top:0.3rem;"></label>
+      <div style="margin-top:1rem; display:flex; gap:0.5rem;">
+        <button type="button" class="btn btn-primary" onclick="simulatePurchase(`Santa's Fortune`, 500, 100000)">Purchase — $500</button>
+        <a class="btn btn-secondary" href="buy.html">Cancel</a>
+      </div>
+    </form>
+
+    <p style="margin-top:1rem;color:#ccc;">Note: This is a demo purchase page. Integrate a real payment/on-ramp to enable live purchases.</p>
+  </main>
+
+<script src="sol.js"></script>
+<script>
+function simulatePurchase(packName, price, tokens) {
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  if (!name || !email) {
+    alert('Please enter name and email to continue.');
+    return;
+  }
+  alert(`Simulated purchase successful: ${packName}\n${tokens} tokens for $${price}\nA confirmation was sent to ${email}`);
+}
+</script>
+</body>
+</html>
